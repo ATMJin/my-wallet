@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虛擬貨幣冷錢包</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>虛擬貨幣冷錢包</h1>
+        
+        <div class="form-section">
+            <h2>個人資料輸入</h2>
+            <form id="personalInfoForm">
+                <input type="text" id="name" placeholder="姓名" required>
+                <input type="text" id="birthdate" placeholder="出生日期" required>
+                <input type="text" id="petName" placeholder="童年寵物名稱" required>
+                <button type="button" id="generateWallet">生成錢包</button>
+            </form>
+        </div>
+
+        <div class="wallet-info" style="display: none;">
+            <h2>錢包資訊</h2>
+            <div class="address-info">
+                <p>公鑰地址：<span id="publicAddress"></span></p>
+                <p>私鑰：<span id="privateKey"></span></p>
+            </div>
+            <div class="balance-info">
+                <p>餘額：<span id="balance">0</span> ETH</p>
+                <button id="refreshBalance">更新餘額</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.esm.min.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
