@@ -32,6 +32,10 @@
         </div>
       </div>
     </div>
-    <script src="app.js" type="module"></script>
+    <script type="module">
+      import { ethers } from "../modules/ethers.min.js";
+      import { ColdWallet } from "./app.js";
+      new ColdWallet(ethers);
+    </script>
   </body>
 </html>

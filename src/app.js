@@ -1,6 +1,6 @@
 import { ethers } from "../modules/ethers.min.js";
 
-class ColdWallet {
+export class ColdWallet {
   constructor() {
     this.initializeEventListeners();
   }
@@ -36,6 +36,7 @@ class ColdWallet {
       const seedPhrase = `${name}-${birthdate}-${petName}`;
 
       // 使用個人資訊生成私鑰
+      // FIXME ethers.utils is undefined
       const hash = ethers.utils.id(seedPhrase);
       const wallet = new ethers.Wallet(hash);
 
@@ -74,6 +75,3 @@ class ColdWallet {
     }
   }
 }
-
-// 初始化應用
-new ColdWallet();
