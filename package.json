@@ -1,0 +1,25 @@
+{
+  "name": "my-wallet",
+  "version": "1.0.0",
+  "description": "my-wallet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATMJin/my-wallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATMJin/my-wallet/issues"
+  },
+  "homepage": "https://github.com/ATMJin/my-wallet#readme",
+  "dependencies": {
+    "@trustwallet/wallet-core": "^4.1.21",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
