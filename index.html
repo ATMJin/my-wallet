@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虛擬貨幣冷錢包</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>虛擬貨幣冷錢包</h1>
+        
+        <section id="wallet-generator">
+            <h2>生成錢包</h2>
+            <form id="personal-info">
+                <div class="form-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">出生日期：</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet">童年寵物名稱：</label>
+                    <input type="text" id="pet" required>
+                </div>
+                <button type="submit">生成地址</button>
+            </form>
+        </section>
+
+        <section id="wallet-info" style="display: none;">
+            <h2>錢包資訊</h2>
+            <div class="info-box">
+                <p>公鑰地址：<span id="public-address"></span></p>
+                <p>餘額：<span id="balance"></span> ETH</p>
+            </div>
+            <div class="action-buttons">
+                <button id="send-btn">發送</button>
+                <button id="receive-btn">接收</button>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
